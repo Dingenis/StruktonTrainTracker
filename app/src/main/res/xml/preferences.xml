@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Details">
+
+        <CheckBoxPreference
+            android:title="Turn on location updates"
+            android:key="pref_location_updates"
+            android:summary="When turned on the app will send the train's location to the server"
+            android:defaultValue="false"/>
+
+        <EditTextPreference
+            android:title="Train Name"
+            android:key="pref_name"
+            android:editable="true"
+            android:summary="The name of the train, this name needs to be unique"
+            android:dependency="pref_location_updates"/>
+
+        <EditTextPreference
+            android:title="Interval Mode"
+            android:key="pref_mode"
+            android:editable="false"
+            android:summary="From 7:00 till 22:30 updates will be sent every 10 minutes, but from 22:30 till 7:00 every 2 minutes. Click here to see the current mode"
+            android:dependency="pref_location_updates"/>
+
+        <EditTextPreference
+            android:title="Train Icon"
+            android:key="pref_icon"
+            android:editable="true"
+            android:summary="The icon of the train, range from 1 - 21"
+            android:inputType="number"
+            android:defaultValue="1"
+            android:dependency="pref_location_updates"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

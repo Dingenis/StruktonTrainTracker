@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Strukton</string>
+    <string name="location_permission_denied">This app can only function with the location services permission granted at all time</string>
+</resources>
